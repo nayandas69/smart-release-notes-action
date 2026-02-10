@@ -1,0 +1,6 @@
+# Ignore everything by default
+*
+
+# Allow only TypeScript source files
+!src/**/*.ts
+!__tests__/**/*.ts

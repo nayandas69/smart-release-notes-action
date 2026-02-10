@@ -1,0 +1,40 @@
+name: "Smart Release Notes Action"
+description: "Automatically generate clean, categorized release notes from merged PRs and commits between Git tags."
+author: "nayandas69"
+
+branding:
+  icon: "file-text"
+  color: "blue"
+
+inputs:
+  token:
+    description: "GitHub token used to fetch PRs, commits, and tags."
+    required: true
+  from_tag:
+    description: "The starting tag for the changelog range. Defaults to the previous tag."
+    required: false
+    default: ""
+  to_tag:
+    description: "The ending tag for the changelog range. Defaults to the current tag."
+    required: false
+    default: ""
+  mode:
+    description: "Data collection mode: PR, COMMIT, or HYBRID."
+    required: false
+    default: "HYBRID"
+  config_file:
+    description: "Path to a JSON config file for category mappings."
+    required: false
+    default: ""
+
+outputs:
+  changelog:
+    description: "The generated release notes in Markdown format."
+  from_tag:
+    description: "The resolved starting tag used for generation."
+  to_tag:
+    description: "The resolved ending tag used for generation."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
