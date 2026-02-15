@@ -1,21 +1,28 @@
 {
-    "title": "Smart Release Notes Action",
-    "description": "Automatically generate clean, categorized release notes from merged PRs and commits.",
-    "author": "Nayan Das",
-    "language": "en",
-    "plugins": [
-        "search",
-        "lunr",
-        "highlight",
-        "copy-code-button"
-    ],
-    "pluginsConfig": {
-        "sharing": {
-            "facebook": false,
-            "twitter": false,
-            "google": false,
-            "weibo": false,
-            "all": []
-        }
+  "gitbook": ">= 3.2.1",
+  "title": "Smart Release Notes Action",
+  "description": "Automatically generate clean, categorized release notes from merged PRs and commits.",
+  "author": "Nayan Das",
+  "language": "en",
+  "plugins": [
+    "edit-link",
+    "prism",
+    "-highlight",
+    "github",
+    "-search",
+    "copy-code-button",
+    "anchorjs"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/nayandas69/smart-release-notes-action/tree/main/docs",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/nayandas69/smart-release-notes-action/"
+    },
+    "copy-code-button": {
+      "color": "#4CAF50"
     }
+  }
 }
