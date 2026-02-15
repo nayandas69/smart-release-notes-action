@@ -1,0 +1,21 @@
+{
+    "title": "Smart Release Notes Action",
+    "description": "Automatically generate clean, categorized release notes from merged PRs and commits.",
+    "author": "Nayan Das",
+    "language": "en",
+    "plugins": [
+        "search",
+        "lunr",
+        "highlight",
+        "copy-code-button"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "weibo": false,
+            "all": []
+        }
+    }
+}
